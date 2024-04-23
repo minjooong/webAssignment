@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <h1>김민중 2020313623</h1>
+                <a href="./index.html">Home</a>
+                <a href="./pizza.html">Menu</a>
+                <a href="./pizzeriao.html">Restaurant</a>
+            </div>
+        </header>
+
+        <div class="headerline">HELLO MY NAME IS MINJUNG AND THIS IS MY WEB PROGRAMMING ASSIGNMENT</div>
+
+        <div class="foods">
+            <h2>Restaurant</h2>
+            <ul>
+                <li class="menu"><a href="./pizzeriao.html">핏제리아오</a></li>
+                <li class="menu"><a href="./sundae.html">순대실록</a></li>
+                <li class="menu"><a href="./phobo.html">포보</a></li>
+                <li class="menu"><a href="./burgerpark.html">버거파크</a></li>
+                <li class="menu"><a href="./bbang.html">건강한빵</a></li>
+            </ul>
+        </div>
+
+        <div class="container2">
+            <div class="content">
+                <h2>순대실록</h2>
+                <p>
+                    꼼꼼하고 까다로운 나라 일본에 알려지고 있는 순대실록. 이색적인 K- 순대 스테이크로 놀라운 흥행 성적을 기록하며 뜨거운 명성을 이어가고 있습니다. 현재 2022년 일본
+                    현지 법인 설립과 공장 mou 체결 완료하였고 여러 한식당과 K-mart, 대형마트 납품을 확장하고 있습니다.
+                </p>
+
+                <h2>메뉴</h2>
+                <p>
+                    <li>순대스테이크 14,0000</li>
+                    <li>순대곱창전골 29,000</li>
+                    <li>순대곱창볶음 29,000</li>
+                    <li>전통순댓국 9,000</li>
+                    <li>시래기순댓국 10,000</li>
+                </p>
+
+                <h2>위치</h2>
+                <div id="daumRoughmapContainer1713703497420" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        timestamp: "1713703497420",
+                        key: "2j3ga",
+                        mapWidth: "460",
+                        mapHeight: "320",
+                    }).render();
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

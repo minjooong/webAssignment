@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <h1>김민중 2020313623</h1>
+                <a href="./index.html">Home</a>
+                <a href="./pizza.html">Menu</a>
+                <a href="./pizzeriao.html">Restaurant</a>
+            </div>
+        </header>
+
+        <div class="headerline">HELLO MY NAME IS MINJUNG AND THIS IS MY WEB PROGRAMMING ASSIGNMENT</div>
+
+        <div class="foods">
+            <h2>Restaurant</h2>
+            <ul>
+                <li class="menu"><a href="./pizzeriao.html">핏제리아오</a></li>
+                <li class="menu"><a href="./sundae.html">순대실록</a></li>
+                <li class="menu"><a href="./phobo.html">포보</a></li>
+                <li class="menu"><a href="./burgerpark.html">버거파크</a></li>
+                <li class="menu"><a href="./bbang.html">건강한빵</a></li>
+            </ul>
+        </div>
+
+        <div class="container2">
+            <div class="content">
+                <h2>버거파크</h2>
+                <p>
+                    성북구 성신여대의 본점을 두고 있는 버거파크입니다. 미국의 쉐이크쉑 버거, 인앤아웃 버거, 파이브가이즈 버거를 연구하여 한국에서도 미국식 햄버거를 만들고 있는 한국
+                    업체입니다. 가장 미국스러운 한국 버거집이 되도록 하겠습니다.
+                </p>
+
+                <h2>메뉴</h2>
+                <p>
+                    <li>치즈버거 (single) 6,200</li>
+                    <li>베이컨치즈버거 (single) 7,200</li>
+                    <li>머쉬룸치즈버거 (single) 7,200</li>
+                    <li>쉬림프치즈버거 (single) 8,200</li>
+                    <li>아보카도치즈버거 (single) 8,400</li>
+                    <li>해쉬베이컨치즈버거 (single) 7,200</li>
+                </p>
+
+                <h2>위치</h2>
+                <div id="daumRoughmapContainer1712931537830" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        timestamp: "1712931537830",
+                        key: "2iwye",
+                        mapWidth: "460",
+                        mapHeight: "320",
+                    }).render();
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

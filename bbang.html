@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <h1>김민중 2020313623</h1>
+                <a href="./index.html">Home</a>
+                <a href="./pizza.html">Menu</a>
+                <a href="./pizzeriao.html">Restaurant</a>
+            </div>
+        </header>
+
+        <div class="headerline">HELLO MY NAME IS MINJUNG AND THIS IS MY WEB PROGRAMMING ASSIGNMENT</div>
+
+        <div class="foods">
+            <h2>Restaurant</h2>
+            <ul>
+                <li class="menu"><a href="./pizzeriao.html">핏제리아오</a></li>
+                <li class="menu"><a href="./sundae.html">순대실록</a></li>
+                <li class="menu"><a href="./phobo.html">포보</a></li>
+                <li class="menu"><a href="./burgerpark.html">버거파크</a></li>
+
+                <li class="menu"><a href="./bbang.html">건강한빵</a></li>
+            </ul>
+        </div>
+
+        <div class="container2">
+            <div class="content">
+                <h2>건강한빵</h2>
+                <p>
+                    혜화에 자리잡은 건강한 빵집. 성대생들 사이에서 모르면 간첩이라는 말을 들을 정도로 유명한 곳이다. 신라호텔에서 10년간 근무하신 사장님의 손길에서 탄생하는 고소한
+                    빵을 맛볼 수 있다. 가장 핫한 메뉴인 밤식빵은 매일 12시반 / 4시반에 판매되며 30분 전에는 도착해 줄을 서 기다려야할 정도로 인기가 대단하다. 1인 1식빵만 판매한다고
+                    하니 가기전에 참고하자.
+                </p>
+
+                <h2>메뉴</h2>
+                <p>
+                    <li>내피밤 파운드 2,500</li>
+                    <li>레몬 파운드 2,000</li>
+                    <li>사랑해! 다쿠아즈 18,000</li>
+                    <li>우유식빵 3,200</li>
+                    <li>앙 스콘 4,000</li>
+                </p>
+
+                <h2>위치</h2>
+                <div id="daumRoughmapContainer1713705504948" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        timestamp: "1713705504948",
+                        key: "2j3gf",
+                        mapWidth: "460",
+                        mapHeight: "320",
+                    }).render();
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
