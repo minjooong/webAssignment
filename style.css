@@ -209,6 +209,30 @@ img {
         width: calc(100% - 10vw);
         margin: 2vw; /* Center horizontally and add margin at the bottom */
     }
+
+    .parent {
+        display: flex;
+        justify-content: center;
+    }
+    .foods {
+        width: 90%;
+        text-align: center;
+    }
+    .foods ul {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+    .foods ul li {
+        flex: 1 0 auto;
+        margin: 1vw;
+    }
+    .foods h2 {
+        margin: 0;
+    }
+    .content {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 600px) {
     .topnav {
