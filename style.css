@@ -2,28 +2,46 @@ body {
     font-family: "NanumSquareRound";
     line-height: 1.6;
     margin: 0;
-    background-color: #f0b45f;
+    /* background-color: #f0b45f; */
+    background-color: #c0d0e8;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+
+    padding-top: 100px;
 }
 
 header {
-    background-color: #f6eee2;
+    /* background-color: #f6eee2; */
+    background-color: #fffbfb;
     height: 74px;
     line-height: 74px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 header h1 {
     margin-right: 20vw;
-    font-size: 24px;
+    font-size: 30px;
     background-image: linear-gradient(to right, #618ad4, #d86f58);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     display: inline;
+}
+
+#header-title:hover {
+    color: #d6644a;
+    cursor: pointer;
 }
 
 .topnav {
@@ -54,6 +72,10 @@ header h1 {
     color: #fff;
     line-height: 26px;
     overflow: hidden;
+    position: fixed;
+    top: 74px;
+    width: 100%;
+    z-index: 1000;
 }
 
 footer {
@@ -62,21 +84,18 @@ footer {
     color: #fff;
     text-align: right;
     line-height: 74px;
+    padding-right: 1vw;
 }
 
 footer img {
     display: inline-block;
     vertical-align: middle;
     width: auto;
-    height: 2vw;
+    /* height: 2vw; */
+    height: 23px;
     margin-left: 1vw;
     padding: 1vw;
 }
-
-/* 기본 (헤더, 네비게이션바, 푸터) 설정 */
-/* 기본 (헤더, 네비게이션바, 푸터) 설정 */
-/* 기본 (헤더, 네비게이션바, 푸터) 설정 */
-/* 기본 (헤더, 네비게이션바, 푸터) 설정 */
 
 .container {
     display: flex;
@@ -86,9 +105,9 @@ footer img {
 
 .content {
     width: 70%;
-    float: left;
     margin: 0 auto;
     padding: 2vw;
+    margin-left: 23%; /* 왼쪽 공간을 늘리기 위해 추가 */
 }
 
 .timetable,
@@ -98,13 +117,14 @@ footer img {
     border: 4px solid #333;
     flex-grow: 1;
     margin: 0 2vw;
-    background-color: #f6eee2;
-    /* background-color: #fefbf7; */
-    /* background-color: #8690c4; */
+    /* background-color: #f6eee2; */
+    background-color: #fffbfb;
+
     padding: 2vw;
     border-radius: 2vw;
     box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
 }
+
 .timetable h2,
 .courses h2,
 .interests h2,
@@ -153,14 +173,15 @@ img {
 
 .foods {
     border: 4px solid #333;
-    float: left;
     width: 15%;
     padding: 2vw;
-    background-color: #f6eee2;
+    background-color: #fffbfb;
     margin: 1vw;
     border-radius: 2vw;
     box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+
+    position: fixed;
+    transition: all 0.3s ease;
 }
 
 .foods h2 {
@@ -193,13 +214,13 @@ img {
     }
 
     .topnav {
-        order: 1; /* 네비게이션을 헤더 h1 다음으로 이동 */
-        width: 100%; /* 전체 너비 차지 */
+        order: 1;
+        width: 100%;
     }
 
     header h1 {
-        order: 2; /* 헤더 h1을 네비게이션 뒤로 이동 */
-        margin: 0 10px; /* 여백을 원래대로 복원 */
+        order: 2;
+        margin: 0;
     }
 
     .timetable,
@@ -207,36 +228,45 @@ img {
     .interests,
     .info {
         width: calc(100% - 10vw);
-        margin: 2vw; /* Center horizontally and add margin at the bottom */
+        margin: 2vw;
     }
 
     .parent {
         display: flex;
         justify-content: center;
     }
+
     .foods {
         width: 90%;
         text-align: center;
+        position: static; /* 고정 해제 */
+        margin: 2vw 0;
     }
+
     .foods ul {
         display: flex;
         flex-wrap: nowrap;
         margin: 0;
     }
+
     .foods ul li {
         flex: 1 0 auto;
         margin: 1vw;
     }
+
     .foods h2 {
         margin: 0;
     }
+
     .content {
         width: 90%;
+        margin-left: 0; /* 왼쪽 공간 초기화 */
     }
 }
+
 @media screen and (max-width: 600px) {
     .topnav {
-        height: auto; /* 높이 자동으로 설정 */
+        height: auto;
         line-height: 45px;
     }
 
@@ -245,18 +275,25 @@ img {
         color: #333;
         text-align: center;
         text-decoration: none;
-        line-height: normal; /* 기본값으로 설정하여 텍스트가 중앙에 위치하도록 함 */
-        height: auto; /* 높이 조정 */
-        padding: 0 3vw; /* 좌우 여백 조정 */
+        line-height: normal;
+        height: auto;
+        padding: 0 3vw;
     }
 
     header {
-        height: auto; /* 자동 높이로 설정 */
+        height: auto;
         margin: 0;
     }
+
     header h1 {
         width: 100%;
         display: block;
         margin-top: 2vw;
+    }
+    .headerline {
+        top: 97.8px;
+    }
+    body {
+        padding-top: 123.8px;
     }
 }

@@ -8,17 +8,6 @@
         <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
     </head>
     <body>
-        <header>
-            <div class="topnav">
-                <h1>김민중 2020313623</h1>
-                <a href="./index.html">Home</a>
-                <a href="./pizza.html">Menu</a>
-                <a href="./pizzeriao.html">Restaurant</a>
-            </div>
-        </header>
-
-        <div class="headerline">HELLO MY NAME IS MINJUNG AND THIS IS MY WEB PROGRAMMING ASSIGNMENT</div>
-
         <div class="parent">
             <div class="foods">
                 <h2>Restaurant</h2>
@@ -51,7 +40,7 @@
 
                 <h2>위치</h2>
 
-                <div id="daumRoughmapContainer1713704122362" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                <div id="daumRoughmapContainer1713704122362" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%"></div>
 
                 <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
@@ -59,11 +48,12 @@
                     new daum.roughmap.Lander({
                         timestamp: "1713704122362",
                         key: "2j3gb",
-                        mapWidth: "460",
+                        // mapWidth: "460",
                         mapHeight: "320",
                     }).render();
                 </script>
             </div>
         </div>
+        <script src="./insert.js"></script>
     </body>
 </html>
