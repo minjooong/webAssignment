@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 <a href="./pizza.html">Menu</a>
                 <a href="./pizzeriao.html">Restaurant</a>
+                <a href="./search.html">Search</a>
                 <a href="./home.html">Info</a>
+
             </div>
         </header>
         <div class="headerline">WELCOME TO MY WEB PROGRAMMING ASSIGNMENT</div>
