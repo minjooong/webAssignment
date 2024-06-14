@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>우맛 - 순대실록</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="ratio.css" />
         <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
     </head>
     <body>
@@ -26,7 +27,7 @@
                 <h2>순대실록</h2>
                 <p>
                     꼼꼼하고 까다로운 나라 일본에 알려지고 있는 순대실록. 이색적인 K- 순대 스테이크로 놀라운 흥행 성적을 기록하며 뜨거운 명성을 이어가고 있습니다. 현재 2022년 일본
-                    현지 법인 설립과 공장 mou 체결 완료하였고 여러 한식당과 K-mart, 대형마트 납품을 확장하고 있습니다.
+                    현지 법인 설립과 공장 mou 체결 완료하였고 여러 한식당과 K-mart, 대형마트 납품을 확장하고 있는 든든한 국밥집입니다.
                 </p>
 
                 <h2>메뉴</h2>
@@ -49,6 +50,30 @@
                         mapHeight: "320",
                     }).render();
                 </script>
+                <form>
+                    <fieldset class="starability-basic">
+                        <legend>평점 남기기</legend>
+                        <input type="radio" id="no-rate-basic" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+
+                        <input type="radio" id="rate1" name="rating" value="1" />
+                        <label for="rate1" title="Terrible">1 star</label>
+
+                        <input type="radio" id="rate2" name="rating" value="2" />
+                        <label for="rate2" title="Not good">2 stars</label>
+
+                        <input type="radio" id="rate3" name="rating" value="3" />
+                        <label for="rate3" title="Average">3 stars</label>
+
+                        <input type="radio" id="rate4" name="rating" value="4" />
+                        <label for="rate4" title="Very good">4 stars</label>
+
+                        <input type="radio" id="rate5" name="rating" value="5" />
+                        <label for="rate5" title="Amazing">5 stars</label>
+
+                        <span class="starability-focus-ring"></span>
+                    </fieldset>
+                    <button type="button" onclick="submitRating()">저장</button>
+                </form>
             </div>
         </div>
         <script src="./insert.js"></script>

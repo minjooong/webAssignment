@@ -6,6 +6,7 @@
         <title>우맛 - 검색</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="search.css" />
+        <script src="search.js"></script>
         <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
     </head>
     <body>
@@ -13,26 +14,15 @@
             <div class="search-container">
                 <h1>우맛 검색</h1>
                 <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
-                <button onclick="search()">검색</button>
-                <button onclick="randomRecommend()">랜덤 추천</button>
+                <button id="searchButton">검색</button>
+                <button id="randomButton">랜덤 추천</button>
                 <br /><br />
                 <input type="file" id="imageUpload" accept="image/*" />
                 <button onclick="search()">이미지 검색</button>
+                <div id="results"></div>
             </div>
         </div>
 
-        <script>
-            function search() {
-                const query = document.getElementById("searchInput").value;
-                alert("검색어: " + query);
-                // 검색 기능을 추가하세요
-            }
-
-            function randomRecommend() {
-                alert("랜덤 추천 기능입니다.");
-                // 랜덤 추천 기능을 추가하세요
-            }
-        </script>
         <script src="insert.js"></script>
     </body>
 </html>

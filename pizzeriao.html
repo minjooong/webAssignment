@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>우맛 - 핏제리아오</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="ratio.css" />
+
         <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet" />
     </head>
     <body>
@@ -24,7 +26,7 @@
         <div class="parent">
             <div class="content">
                 <h2>핏제리아오</h2>
-                <p>핏제리아’오 만의 독창적인 도우 연구 핏제리아’오의 핵심인 도우는 새벽 5시부터 준비! 숨 쉬는 도우로 쫄깃하고 고소한 맛을 선사합니다.</p>
+                <p>핏제리아’오 만의 독창적인 도우로 피자를 만듭니다. 핏제리아’오의 핵심인 도우는 새벽 5시부터 준비! 숨 쉬는 도우로 쫄깃하고 고소한 맛을 선사합니다.</p>
 
                 <h2>메뉴</h2>
                 <p>
@@ -51,6 +53,30 @@
                         mapHeight: "320",
                     }).render();
                 </script>
+                <form>
+                    <fieldset class="starability-basic">
+                        <legend>평점 남기기</legend>
+                        <input type="radio" id="no-rate-basic" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+
+                        <input type="radio" id="rate1" name="rating" value="1" />
+                        <label for="rate1" title="Terrible">1 star</label>
+
+                        <input type="radio" id="rate2" name="rating" value="2" />
+                        <label for="rate2" title="Not good">2 stars</label>
+
+                        <input type="radio" id="rate3" name="rating" value="3" />
+                        <label for="rate3" title="Average">3 stars</label>
+
+                        <input type="radio" id="rate4" name="rating" value="4" />
+                        <label for="rate4" title="Very good">4 stars</label>
+
+                        <input type="radio" id="rate5" name="rating" value="5" />
+                        <label for="rate5" title="Amazing">5 stars</label>
+
+                        <span class="starability-focus-ring"></span>
+                    </fieldset>
+                    <button type="button" onclick="submitRating()">저장</button>
+                </form>
             </div>
         </div>
         <script src="./insert.js"></script>
