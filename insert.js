@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <header>
             <div class="topnav">
                 <h1 id="header-title">우 맛</h1>
-                <a href="./home.html">Home</a>
+                
                 <a href="./pizza.html">Menu</a>
                 <a href="./pizzeriao.html">Restaurant</a>
+                <a href="./home.html">Info</a>
             </div>
         </header>
         <div class="headerline">WELCOME TO MY WEB PROGRAMMING ASSIGNMENT</div>

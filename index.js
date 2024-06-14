@@ -16,16 +16,43 @@ function showNextMessage() {
     messageElement.classList.add("fade-in");
     messageElement.innerHTML = messages[currentIndex];
     currentIndex = (currentIndex + 1) % messages.length;
+    placeRandomImages();
+}
+
+function placeRandomImages() {
+    // 기존의 랜덤 이미지를 모두 제거
+    document.querySelectorAll(".random-image").forEach((img) => img.remove());
+
+    const numberOfImages = 9;
+    const messageRect = messageElement.getBoundingClientRect();
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        const img = document.createElement("img");
+        img.src = `Img/${i}.png`;
+        img.classList.add("random-image");
+
+        document.body.appendChild(img);
+
+        // 이미지의 위치를 랜덤으로 배치, 메시지 영역을 피하도록 조정
+        let x, y;
+        do {
+            x = Math.random() * (window.innerWidth - 100); // 이미지 크기(100px)를 반영
+            y = Math.random() * (window.innerHeight - 100); // 이미지 크기(100px)를 반영
+        } while (x + 100 > messageRect.left && x < messageRect.right && y + 100 > messageRect.top && y < messageRect.bottom);
+
+        img.style.left = `${x}px`;
+        img.style.top = `${y}px`;
+    }
 }
 
 // 10초마다 메시지 전환
-const intervalId = setInterval(showNextMessage, 7000);
+let intervalId = setInterval(showNextMessage, 10000);
 
 // 화면 클릭 시 즉시 메시지 전환
 document.body.addEventListener("click", () => {
     clearInterval(intervalId); // 기존 타이머 제거
-    showNextMessage();
-    setInterval(showNextMessage, 10000); // 새로운 타이머 시작
+    showNextMessage(); // 즉시 메시지 전환
+    intervalId = setInterval(showNextMessage, 10000); // 새로운 타이머 시작
 });
 
 // 처음 메시지 표시

@@ -32,10 +32,28 @@
 
 .intro {
     padding: 15px;
+    font-family: "NanumAInMamSonGeurSsi";
+    font-size: clamp(1em, 4vw, 2em);
 }
 
 @media screen and (max-width: 600px) {
     .message-container {
         height: calc(100vh - 74px - 74px - 26px - 23.8px); /* 헤더와 푸터를 뺀 높이 */
     }
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.random-image {
+    position: absolute;
+    width: 100px; /* 이미지 크기를 조절합니다 */
+    height: 100px;
+    z-index: 5; /* 이미지의 z-index를 메시지보다 낮게 설정 */
+}
+
+footer {
+    z-index: 6;
 }
