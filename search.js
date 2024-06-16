@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function randomRecommend() {
         const randomIndex = Math.floor(Math.random() * pages.length);
         const randomPage = pages[randomIndex];
-        window.open(randomPage.url, "_blank");
+        window.location.href = randomPage.url;
     }
 
     // 검색 버튼 클릭 이벤트 연결
