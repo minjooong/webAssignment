@@ -1,11 +1,11 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
+import cv2
 import io
-from PIL import Image
 
 app = FastAPI()
 
@@ -25,12 +25,16 @@ class_labels = ['국밥', '돈카츠', '피자', '빵', '햄버거']
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     try:
-        # 이미지 파일을 PIL 형식으로 읽기
+        # 이미지 파일을 읽기
         contents = await file.read()
-        img = Image.open(io.BytesIO(contents))
-
+        np_arr = np.frombuffer(contents, np.uint8)
+        img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+        
+        if img is None:
+            raise ValueError("이미지 파일을 읽는 데 실패했습니다.")
+        
         # 이미지 전처리
-        img = img.resize((224, 224))  # 모델에 맞는 입력 크기로 조정
+        img = cv2.resize(img, (224, 224))  # 모델에 맞는 입력 크기로 조정
         img_array = image.img_to_array(img)
         img_array = np.expand_dims(img_array, axis=0)
         img_array /= 255.0  # 모델 입력에 맞게 정규화
@@ -41,5 +45,12 @@ async def predict(file: UploadFile = File(...)):
 
         return JSONResponse(content={"prediction": predicted_class})
     except Exception as e:
+        print(f"Error: {str(e)}")  # 오류를 콘솔에 출력
         return JSONResponse(content={"error": str(e)}, status_code=500)
+
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=9999, log_level="debug",
+                proxy_headers=True, reload=True)
 
