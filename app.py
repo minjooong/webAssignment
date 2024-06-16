@@ -20,7 +20,7 @@ app.add_middleware(
 
 # 모델 및 클래스 레이블 로드
 model = load_model('food_classification_model.h5')
-class_labels = ['국밥', '돈카츠', '피자', '빵', '햄버거']
+class_labels = ['국밥', '돈카츠', '빵', '피자', '햄버거']
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
