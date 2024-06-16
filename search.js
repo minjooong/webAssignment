@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             results.forEach((result) => {
                 const resultItem = document.createElement("div");
                 resultItem.classList.add("result-item");
-                resultItem.innerHTML = `<h3><a href="${result.url}" target="_blank">${result.title}</a></h3>`;
+                resultItem.innerHTML = `<h3><a href="${result.url}" target="_self">${result.title}</a></h3>`;
                 resultsContainer.appendChild(resultItem);
             });
         } else {
