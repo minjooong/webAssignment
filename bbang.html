@@ -33,6 +33,25 @@
                     하니 가기전에 참고하자.
                 </p>
 
+                <!-- 슬라이드 추가 -->
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHGQKWkdzghFVW3xMLuREBd_1LltiYYiWA7w&usqp=CAU" alt="Slide 1" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP6-P909qj0NboItunyOV0lr3EzlNx1dx98g&usqp=CAU" alt="Slide 2" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKkFSTRi4eXOr7GVeLmZP1-7SHOWGWMcx5Mw&usqp=CAU" alt="Slide 3" />
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <div class="prev" onclick="moveSlides(-1)">❮</div>
+                        <div class="next" onclick="moveSlides(1)">❯</div>
+                    </div>
+                </div>
+
                 <h2>메뉴</h2>
                 <p>
                     <li>내피밤 파운드 2,500</li>
@@ -80,6 +99,16 @@
                 </form>
             </div>
         </div>
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelector(".slides");
+            const totalSlides = document.querySelectorAll(".slide").length;
+
+            function moveSlides(n) {
+                currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+                slides.style.transform = "translateX(" + -currentSlide * 100 + "%)";
+            }
+        </script>
         <script src="./insert.js"></script>
     </body>
 </html>

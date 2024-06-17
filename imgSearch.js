@@ -9,7 +9,7 @@ $(document).ready(function () {
         formData.append("file", fileInput.files[0]);
 
         $.ajax({
-            url: "http://52.79.155.26:9999/predict",
+            url: "http://3.35.175.25:9999/predict",
             type: "POST",
             data: formData,
             contentType: false,
